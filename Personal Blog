@@ -1,0 +1,690 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Personal Blog - CodePad</title> <base href="/"><link rel="shortcut icon" href="/static/images/icons/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="html, css, javascript, python, java, literally any programming language, programming, coding, epicness, download, free, codepad, codepad site, codepad com, codepad org, code pad, coderpad, coder pad, whizkidz, whiz kid, whiz kids, wiz kid, go, js, flask, python flask, cool, awesome, epicmc, epicmc rocks, repl.it, repl.it alternative, repl it, replit, repl it alternative, notepad, notepad.pw, notepad pw, notepad pw alternative, notepad.org"><meta name="description" content="Introducing CodePad, the new way of coding. Write and share code in your browser! You don't need to download anything anymore. Try it now for free! YEAH!"><script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" media="print" onload='this.media="all"'><link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" media="print" onload='this.media="all"'><link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" media="print" onload='this.media="all"'><link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet" media="print" onload='this.media="all"'><link rel="stylesheet" id="tree-theme" href="/static/styles/jstree_light.css" media="print" onload='this.media="all"'><script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.15/jstree.min.js" integrity="sha512-zTdDEt8tOqDRVRFKgypzg8g7FJE7A9lhnTZ6YpUlufaF/XvjIGF/zaPljDhER8XmIwePEAjBjv27TEuubED0/A==" crossorigin="anonymous" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/goldenlayout.min.js" integrity="sha512-hyNFr2z6JxeT4lGuVVJJW2EH3O14204DzSCJtm/MBCNQxpqut2kP9JoDVn+FMJiOJFQqfErXY/WabAab3h0uUw==" crossorigin="anonymous" defer="defer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/css/goldenlayout-base.css" integrity="sha512-rGtzJyDE8egZ/OScuBNLW1EIhRydcfrZo14oTvZwRLzEZu+s8foCtwi0XhXsKnhuoQAwJ7POFARWdU4fBL7FbQ==" crossorigin="anonymous" media="print" onload='this.media="all"'><link rel="stylesheet" href="/static/styles/layout_light.css" id="layout-theme"><link rel="stylesheet" href="static/prism/prism_light.css" id="prism-theme"><script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha512-HTENHrkQ/P0NGDFd5nk6ibVtCkcM7jhr2c7GyvXp5O+4X6O5cQO9AhqFzM+MdeBivsX7Hoys2J7pp2wdgMpCvw==" crossorigin="anonymous" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="static/prism/prism.js" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js" crossorigin="anonymous" defer="defer"></script><script src="/static/js/libraries/guacamole_common_js.js" defer="defer"></script><script src="/static/js/websocket_pipeline.js" defer="defer"></script><script src="/static/js/output_tab_manager.js" defer="defer"></script><script src="/static/js/audio_streamer.js" defer="defer"></script><script src="/static/js/iframe_provider.js" defer="defer"></script><script src="/static/js/console_provider.js" defer="defer"></script><script src="/static/js/libraries/ansi_parser.js" defer="defer"></script><script src="/static/js/libraries/ansi_terminal.js" defer="defer"></script><script src="/static/js/libraries/evaluate_key_code.js" defer="defer"></script><script src="/static/js/libraries/ansi_up.js" defer="defer"></script><script src="/static/js/shell_provider.js" defer="defer"></script><script src="/static/js/guacamole_provider.js" defer="defer"></script><script src="/static/js/collaboration_manager.js" defer="defer"></script><script src="/static/js/libraries/diff_engine.js" defer="defer"></script><script src="/static/js/file_modification_pipeline.js" defer="defer"></script><script src="/static/js/project_data.js"></script><script src="/static/js/editor_instance.js" defer="defer"></script><script src="/static/js/editor_manager.js" defer="defer"></script><script src="/static/js/files_column.js" defer="defer"></script><script src="/static/js/lessons_column.js" defer="defer"></script><script src="/static/js/codepage_startup.js" defer="defer"></script><script src="/static/js/ai_manager.js" defer="defer"></script><style id="main-styles">@font-face{font-family:Fixedsys;src:url(/static/fonts/fixedsys.woff);font-display:swap}@font-face{font-family:comic;src:url(/static/fonts/comic.ttf);font-display:swap}@font-face{font-family:consola;src:url(/static/fonts/consola.ttf);font-display:swap}@font-face{font-family:segoeui;src:url(/static/fonts/segoeui.ttf);font-display:swap}@font-face{font-family:arial;src:url(/static/fonts/arial.ttf);font-display:swap}@font-face{font-family:lucon;src:url(/static/fonts/lucon.ttf);font-display:swap}@font-face{font-family:cascadia;src:url(/static/fonts/cascadia.ttf);font-display:swap}.theme-font-style{font-size:11pt;font-family:Consolas,consola}#coolest-navbar-ever .nav-item{font-size:18pt;padding:5px}body{display:block;overflow-x:hidden;overflow-y:hidden;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}.rainbow{animation:rainbow 2.5s linear;animation-iteration-count:infinite}@keyframes rainbow{0%,100%{color:red}8%{color:#ff7f00}16%{color:#ff0}25%{color:#7fff00}33%{color:#0f0}41%{color:#00ff7f}50%{color:#0ff}58%{color:#007fff}66%{color:#00f}75%{color:#7f00ff}83%{color:#f0f}91%{color:#ff007f}}.custom-control-label::before{background-color:inherit}.jstree-wholerow-clicked{background-color:rgba(0,123,255,.6)!important}.next-to-tab-btn{font-size:14px;position:relative;bottom:2px;left:8px;opacity:.7;margin-right:6px}.next-to-tab-btn:hover{text-decoration:none}#project-name{display:inline;width:150px;position:relative;top:-1.5px}#header-slash{position:relative;top:-1px;color:gray;cursor:default}.console-error,.console-log{margin-left:5px}.console-error{color:red}@keyframes blinking-cursor-animation{0%,49%{background-color:#a9a9a9}100%,50%{background-color:transparent}}.text-output{outline:0;padding-left:5px}.gui-display{position:relative;z-index:0;width:100%;height:100%;overflow:auto}.lm_controls>.lm_close,.lm_controls>.lm_popout{display:none!important}.lm_controls>.lm_maximise{background-size:10px 10px;width:20px!important;height:20px!important}#pad-details .form-group .form-control{margin-top:10px}.monaco-vim-status{font-size:12pt;padding-top:3px;padding-bottom:3px;padding-left:5px}.monaco-vim-status input{background-color:transparent;outline:0;border:none}.monaco-vim-status input:focus{outline:0;border:none}.almostbold{font-weight:550}.notreallyalmostbold{font-weight:500}.highlighted-row{display:block;box-sizing:border-box;width:100%}#main-file-jstree .highlighted-row{background-color:rgba(0,255,0,.3)}#main-file-jstree .jstree-wholerow-hovered,.file-explorer-jstree .jstree-wholerow-hovered{background:unset}.running-file-highlight{display:block}.the-funny-file{position:relative}.btn-purple{color:#fff;background-color:#7628a7;border-color:#7628a7}.btn-purple:hover{color:#fff;background-color:#692188;border-color:#5e1e7e}.btn-purple.focus,.btn-purple:focus{color:#fff;background-color:#692188;border-color:#5e1e7e;box-shadow:0 0 0 .2rem rgba(133,72,180,.5)}.btn-purple.disabled,.btn-purple:disabled{color:#fff;background-color:#7628a7;border-color:#7628a7}.btn-purple:not(:disabled):not(.disabled).active,.btn-purple:not(:disabled):not(.disabled):active,.show>.btn-purple.dropdown-toggle{color:#fff;background-color:#5e1e7e;border-color:#1c7430}.btn-purple:not(:disabled):not(.disabled).active:focus,.btn-purple:not(:disabled):not(.disabled):active:focus,.show>.btn-purple.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(133,72,180,.5)}.btn-orange{color:#fff;background-color:#f5910f;border-color:#f5910f}.btn-orange:hover{color:#fff;background-color:#b5782d;border-color:#b87d25}.btn-orange.focus,.btn-orange:focus{color:#fff;background-color:#b5782d;border-color:#b87d25;box-shadow:0 0 0 .2rem rgba(180,140,72,.5)}.btn-orange.disabled,.btn-orange:disabled{color:#fff;background-color:#f5910f;border-color:#f5910f}.btn-orange:not(:disabled):not(.disabled).active,.btn-orange:not(:disabled):not(.disabled):active,.show>.btn-orange.dropdown-toggle{color:#fff;background-color:#b87d25;border-color:#745f1c}.btn-orange:not(:disabled):not(.disabled).active:focus,.btn-orange:not(:disabled):not(.disabled):active:focus,.show>.btn-orange.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(180,137,72,.5)}@font-face{font-family:oldicons;src:url(/static/fonts/fa-solid-900.woff2) format('woff2')}.share-icon{font-family:oldicons;font-style:normal}.share-icon:before{content:"\f1e0"}.dropdown-item.active,.dropdown-item:active{background-color:rgba(0,123,255,.4)}.dropdown-item:focus:not(.active):not(:hover):not(:active){background-color:unset}.upload-button-disabled{pointer-events:none;opacity:.5}.item-uploader-item{height:40px;display:flex;align-items:center;position:relative}.upload-progress-bar{position:absolute;width:0%;height:100%;background-color:rgba(87,237,87,.4)}.item-upload-name{width:100%;text-align:left;padding-left:50px;padding-right:35px;z-index:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;direction:rtl}.cancel-upload-button{z-index:2}.item-drop-possible{border:dashed 2px #28a745;background-color:rgba(87,237,87,.2)!important;z-index:3!important}.upload-folder-expand{width:32px!important;height:32px!important;position:absolute;z-index:2}.profile-pic-holder{position:absolute;z-index:10;height:32px;display:inline-flex;align-items:center}.number-circle{border-radius:50%;width:22px;height:22px;text-align:center;font:700 14px Arial,sans-serif;pointer-events:none;background:#fff;border:2px solid #333;color:#333}.remote-selection-cursor{position:absolute;border-left:solid var(--remote-selection-cursor-size);border-right:solid var(--remote-selection-cursor-size);border-bottom:solid var(--remote-selection-cursor-size);box-sizing:border-box}.remote-selection-cursor::before{content:'\200d'}.remote-selection-cursor::after{content:attr(data-peer-name);position:absolute;border:calc(var(--remote-selection-cursor-size) * 2) solid;border-radius:50%;left:calc(var(--remote-selection-cursor-size) * -2);top:calc(var(--remote-selection-cursor-size) * -3);height:0;width:0;background-color:inherit;color:transparent;pointer-events:none}.remote-selection-cursor-show-name::after{border-radius:8px;transform:translate(calc(var(--remote-selection-cursor-size) * -3),calc(-100% + var(--remote-selection-cursor-size) * 2));display:inline-block;padding:0 calc(var(--remote-selection-cursor-size) * 5);color:#000;font-size:calc(var(--remote-selection-cursor-size) * 8);width:auto;height:calc(var(--remote-selection-cursor-size) * 10);line-height:calc(var(--remote-selection-cursor-size) * 8);border:none;left:unset;top:unset}.append-word-joiner::after{content:'\200d'}.peer-popup-outer{position:absolute;border:1px solid #a0a0a0;border-radius:10px;z-index:20;overflow:hidden;margin:3px}.peer-popup{width:200px;max-height:135px;overflow-y:auto;display:flex;flex-direction:column-reverse}.peer-popup-profile{display:flex;height:40px;align-items:center;justify-content:center;cursor:pointer}.peer-popup-profile:hover{background:rgba(172,172,172,.6)}.peer-popup-picture{border-radius:50%;height:85%;pointer-events:none}.peer-popup-name{height:75%;width:75%;padding-left:10%;display:flex;align-items:center;pointer-events:none;overflow:hidden;white-space:nowrap}.info-banner{position:fixed;z-index:10000;display:none;border-radius:2px;pointer-events:none}.grecaptcha-badge{display:none!important}.col.settings-label{flex:0 0 130px;text-align:right;margin-bottom:10px}.choose-output-container{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}.choose-output-btn{margin-left:1rem;margin-right:1rem;margin-top:1rem;margin-bottom:1rem;min-width:150px;height:128px;font-size:1.5rem;white-space:nowrap;border-width:2px;transition:filter .15s ease-in-out}.choose-output-btn:hover img{filter:brightness(0) invert(1)}@media (max-width:992px){.choose-output-btn{transform:scale(.7);margin-left:-.5rem;margin-right:-.5rem;margin-top:-.5rem;margin-bottom:-.5rem}}#cody-prompt{resize:none}#cody-response{border-radius:5px;padding:10px;margin-bottom:10px}#cody-message,#cody-your-message{padding:10px;border-radius:5px;display:inline}#cody-your-message{float:right;display:none}</style></head><body><div class="dropdown-menu dropdown-menu-sm theme-bg-color" id="context-menu" style="font-size:10pt"> <a class="dropdown-item theme-text-color" href="javascript:" id="add-file-popup" style="padding-left:6px"><span class="fa-solid fa-file" style="padding-right:1px;opacity:.8"></span><span style="padding-right:6px">+</span>Add file</a> <a class="dropdown-item theme-text-color" href="javascript:" id="add-folder-popup" style="padding-left:6px"><span class="fa-solid fa-folder" style="padding-right:1px;opacity:.8"></span><span style="padding-right:2px">+</span>Add folder</a><div class="dropdown-divider"></div><a class="dropdown-item show-for-item-only theme-text-color" href="javascript:" id="duplicate-item-popup" style="padding-left:7px"><span class="fa-solid fa-copy" style="opacity:.8;padding-right:12px"></span>Duplicate</a> <a class="dropdown-item show-for-pad-only theme-text-color" href="javascript:" id="duplicate-pad-popup" style="padding-left:4px"><span class="fa-solid fa-copy" style="opacity:.8;padding-right:13px"></span>Duplicate pad</a> <a class="dropdown-item show-for-item-only theme-text-color" href="javascript:" id="download-item-popup" style="padding-left:10px"><span class="fa-solid fa-arrow-down-long" style="opacity:.8;padding-right:14px"></span>Download</a> <a class="dropdown-item show-for-pad-only theme-text-color" href="javascript:" id="download-pad-popup" style="padding-left:10px"><span class="fa-solid fa-arrow-down-long" style="opacity:.8;padding-right:14px"></span>Download pad</a><div class="dropdown-divider show-for-item-only"></div><a class="dropdown-item show-for-item-only theme-text-color" href="javascript:" id="rename-popup" style="padding-left:32px">Rename</a> <a class="dropdown-item show-for-item-only" href="javascript:" id="delete-popup" style="padding-left:10px"><span class="fa-solid fa-trash" style="padding-right:10px"></span>Delete</a><div class="dropdown-divider show-for-runnable-only"></div><div id="run-hovered-file-holder" data-original-title="" data-toggle="tooltip" data-placement="right"><a class="dropdown-item show-for-runnable-only theme-text-color" href="javascript:" id="run-hovered-file" style="padding-left:10px"><span class="fa-solid fa-play" style="color:#0BDA51;padding-right:11px"></span>Run File</a></div><a class="dropdown-item show-for-main-files-only theme-text-color" href="javascript:" id="set-main-file-hover" style="padding-left:32px" disabled="disabled">Set Main File</a></div><div class="container-fluid py-2 info-banner" id="remix-msg"><br><div class="text-center"><span class="px-4 py-3" style="pointer-events:all;background-color:#daffd9">Remix created!</span></div></div><div class="container-fluid py-2 info-banner" id="access-msg"><br><div class="text-center"><span class="px-4 py-3" style="pointer-events:all;background-color:#cfe9ff">Access Updated</span></div></div><nav class="navbar navbar-expand-lg navbar-light bg-light" id="coolest-navbar-ever"><span class="navbar-brand thisisthecodepadlogo mr-0" style="font-size:18pt;display:flex"> <a class="text-decoration-none mr-3" href="/"><span style="color:red;pointer-events:none" id="codepad-code">Code</span><span style="color:#00f;pointer-events:none" id="codepad-pad">Pad</span> </a><span class="mr-3" id="header-slash">/</span>  <span><input type="text" placeholder="Untitled" class="form-control" id="project-name" maxlength="50" autocomplete="off" value="Personal Blog"></span>  </span><button id="navbar-toggle-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav mx-2" id="theNavBarTM" style="flex-direction:row;justify-content:space-evenly"><li class="nav-item" data-toggle="tooltip" title="New"><a class="nav-link" id="open-new-project-dialog" href="javascript:"><i class="fa-solid fa-plus"></i></a></li> <li class="nav-item" data-toggle="tooltip" title="My Pads"><a class="nav-link" href="/mypads"><i class="fa-solid fa-folder-open"></i></a></li> <li class="nav-item" data-toggle="tooltip" title="Upload"><a class="nav-link" id="open-upload-dialog" href="javascript:"><i class="fa-solid fa-upload"></i></a></li><li class="nav-item" data-toggle="tooltip" title="Save" style="display:none"><a class="nav-link" id="save-button" href="javascript:"><i class="fa-solid fa-save"></i></a></li> <li class="nav-item" data-toggle="tooltip" title="Cody AI (new!)"><a class="nav-link" id="ai-button" href="javascript:"><i class="fa-solid fa-robot"></i></a></li>  <li class="nav-item" data-toggle="tooltip" title="Find"><a class="nav-link" id="find-button" href="javascript:"><i class="fa-solid fa-search"></i></a></li><li class="nav-item" data-toggle="tooltip" title="Settings"><a class="nav-link" href="javascript:" data-toggle="modal" data-target="#settings-modal"><i class="fa-solid fa-cog"></i></a></li></ul><ul class="navbar-nav mr-auto"> <li class="nav-item"><button title="Share this pad." class="nav-link btn btn-success px-2 w-100" id="share-btn" type="button"><i class="share-icon mr-1" style="color:#c8c8c8"></i><span id="more-share-btn-text" style="color:#fff">Share</span></button></li>   <li class="nav-item"><div id="run-btn-holder" class="btn-group w-100"><div class="w-100" title="Run" data-toggle="tooltip" data-placement="bottom"><button class="nav-link btn btn-primary px-2 w-100 output-run-btn" style="border-top-right-radius:0;border-bottom-right-radius:0" type="button" disabled="disabled"><i class="fa-solid fa-play mr-1" style="color:#c8c8c8"></i> <span class="output-run-btn-text" style="color:#fff">Run</span></button></div><button class="btn btn-primary dropdown-toggle dropdown-toggle-split ml-0 output-run-btn" type="button" data-toggle="dropdown" aria-expanded="false" disabled="disabled"><span class="sr-only">Run Options</span></button><div class="dropdown-menu dropdown-menu-right theme-bg-color" style="font-size:10pt"><button id="run-dropdown-output-tab" class="dropdown-item theme-text-color" type="button"><i class="fa-solid fa-plus mr-2" style="padding-left:1px"></i> <span style="padding-left:1px">Output tab</span></button> <button id="run-dropdown-run-settings" class="dropdown-item theme-text-color" type="button"><i class="fa-solid fa-cog mr-2"></i> <span>Run settings</span></button></div></div></li></ul><ul class="navbar-nav"><li class="nav-item"><a class="nav-link btn btn-purple" href="/pad/6x370d1l" title="This is what others will see when viewing your pad"><i class="fa-solid fa-eye" id="view-change-btn-text" style="color:#c8c8c8"></i> <span id="more-view-btn-text" style="color:#fff">Project Page</span></a></li></ul><ul class="navbar-nav" id="already-logged-in"><div class="dropdown show"><li class="nav-item" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="SBrown11" style="font-size:16pt;display:inline-block"><a class="nav-link" href="javascript:"><img src="/profilepic/SBrown11?" width="25" height="25" style="position:relative;top:-1px;border-radius:50%" id="profile-pic-on-user-thing">&nbsp;<span id="user-thing" class="put-username-here">SBrown11</span> <i class="fa-solid fa-sort-down" style="position:relative;top:-3px"></i></a></li><div class="dropdown-menu dropdown-menu-right theme-bg-color" aria-labelledby="dropdownMenuLink"><a class="dropdown-item norefreshlink theme-text-color" href="/user/SBrown11">Profile</a> <a class="dropdown-item norefreshlink theme-text-color" href="/mypads">My Pads</a> <a class="dropdown-item norefreshlink theme-text-color" href="/sharedpads">Shared With Me</a> <a class="dropdown-item norefreshlink theme-text-color" href="/settings">Account Settings</a> <div class="dropdown-divider"></div><a class="dropdown-item theme-text-color" href="/logout">Sign out</a></div></div></ul></div></nav><div id="goldenlayout-holder" style="margin-left:-1px;margin-right:-1px"></div><div class="modal fade" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="settings-modal-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-xl" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header" id="settings-header-123"><h5 id="settings-modal-title" class="modal-title">Settings</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body pb-0"><div class="container"><div class="row"><div class="col-3"><ul class="nav flex-column nav-pills mt-1" id="settings-nav"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="javascript:" onclick='$("#editor-settings").hide(),$("#run-settings").hide(),$("#pad-details").show()'>Pad Details</a></li><li class="nav-item" id="run-settings-tab" style="display:none"><a class="nav-link" data-toggle="tab" href="javascript:" onclick='$("#editor-settings").hide(),$("#pad-details").hide(),$("#run-settings").show()'>Run Settings</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="javascript:" onclick='$("#pad-details").hide(),$("#run-settings").hide(),$("#editor-settings").show()'>Editor</a></li></ul></div><div class="col-9" style="overflow:auto;height:calc(60vh);min-height:250px"><div id="pad-details" class="mt-1"> <project-details-form id="settings-modal-details-form"><button id="settings-modal-save-details" class="btn btn-primary mr-2" type="button" slot="success-btn" data-dynamically-disable="true">Save</button> <button id="settings-modal-revert-details" class="btn btn-secondary" type="button" slot="revert-btn" data-dynamically-disable="true">Revert</button></project-details-form></div><div id="run-settings" class="mt-1" style="display:none"><h4 style="margin-bottom:.75rem">Main File</h4><div id="main-file-jstree"></div><hr><div class="custom-control custom-switch mt-2"><input type="checkbox" class="custom-control-input" id="web-server-mode-switch"><label class="custom-control-label" for="web-server-mode-switch">Use custom web server</label></div> </div><div id="editor-settings" class="mt-1" style="display:none"><div class="container"><div class="row mb-2 form-inline"><span class="col settings-label">Theme:</span><select id="theme-list" class="form-control"><option value="idea">Light</option><option value="monokai">Dark</option><option value="eclipse">Eclipse</option><option value="epic">Epic</option><option value="hacker">Hacker Green</option><option value="meme">Meme</option><option value="3024-day">Midday Coder</option><option value="night">Midnight Coder</option><option value="ambiance">PROgrammer</option><option value="rubyblue">Ruby Blue</option><option value="spooky">Spooky</option><option value="superdark">SuperDark</option><option value="toy-chest">Toy Chest</option><option value="cool">2Cool4School</option><option value="systemtheme">System theme</option></select></div><div class="row mb-2 form-inline"><span class="col settings-label">Font:</span><select id="font-families" class="form-control"><option value="Consolas, consola" style="font-family:Consolas,consola">Consolas</option><option value="cascadia" style="font-family:cascadia">Cascadia Code</option><option value="Courier New" style="font-family:'Courier New'">Courier New</option><option value="Fixedsys" style="font-family:Fixedsys,fixedsys">Fixedsys</option><option value="Inconsolata" style="font-family:Inconsolata">Inconsolata</option><option value="'Lucida Console', lucon" style="font-family:'Lucida Console',lucon">Lucida Console</option><option value="Overpass Mono" style="font-family:'Overpass Mono'">Overpass Mono</option><option value="Roboto Mono" style="font-family:'Roboto Mono'">Roboto Mono</option><option value="Source Code Pro" style="font-family:'Source Code Pro'">Source Code Pro</option><option value="'Comic Sans MS', comic" style="font-family:'Comic Sans MS',comic">Comic Sans MS</option><option value="Arial, arial" style="font-family:Arial,arial">Arial</option><option value="'Segoe UI', segoeui" style="font-family:'Segoe UI',segoeui">Segoe UI</option></select></div><div class="row mb-2 form-inline"><span class="col settings-label">Font size:</span><select id="font-sizes" class="form-control"><option value="10">10</option><option value="11" selected="selected">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="16">16</option><option value="18">18</option><option value="24">24</option><option value="28">28</option><option value="36">36</option></select></div><div class="row mb-2 form-inline"><span class="col settings-label">Tab character:</span><select id="tab-chars" class="form-control"><option value="spaces" selected="selected">Spaces</option><option value="tabs">Tabs</option></select></div><div class="row mb-3 form-inline"><span class="col settings-label">Tab size:</span><select id="tab-sizes" class="form-control"><option value="2">2</option><option value="4" selected="selected">4</option><option value="8">8</option></select></div></div><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="linewrap"><label class="custom-control-label" for="linewrap">Line wrap</label></div><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="linenumberscode"><label class="custom-control-label" for="linenumberscode">Line numbers for code files</label></div><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="linenumberstext"><label class="custom-control-label" for="linenumberstext">Line numbers for text files</label></div><br><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="autosave"><label class="custom-control-label" for="autosave">Autosave files</label><i class="fa-regular fa-circle-question" data-toggle="tooltip" data-placement="right" title="Always autosaves with other collaborators present."></i></div><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="close-brackets"><label class="custom-control-label" for="close-brackets">Auto close brackets/tags</label></div><div class="custom-control custom-switch" id="word-based-checkbox"><input type="checkbox" class="custom-control-input" id="word-based-suggestions"><label class="custom-control-label" for="word-based-suggestions">Autocomplete used words</label></div><br><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="tab-lines"><label class="custom-control-label" for="tab-lines">Show tab lines</label></div><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="active-line-mode"><label class="custom-control-label" for="active-line-mode">Highlight active line</label></div><br><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="whoooa"><label class="custom-control-label" for="whoooa">Epic Gamer Mode</label></div><span id="epicmode" class="text-danger" style="display:none">congratulations! you just activated EPIC MODE<br></span></div></div></div></div></div><div class="modal-footer"><p style="font-size:12px" class="mr-auto">CodePad - Made with awesomeness by the CodePad team</p><button type="button" class="btn btn-primary" id="settings-modal-ok" data-dismiss="modal">OK</button></div></div></div></div><div class="modal fade" id="delete-dialog" tabindex="-1" role="dialog" aria-labelledby="delete-dialog-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header"><h5 id="delete-dialog-title" class="modal-title">Delete File</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body">Are you sure you want to permanently delete the following?<div id="delete-dialog-items" class="d-flex flex-column align-items-center mt-1"></div></div><div class="modal-footer"><button id="confirm-delete" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button> <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button></div></div></div></div><div class="modal fade" id="upload-dialog" tabindex="-1" role="dialog" aria-labelledby="uploader-title" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered" role="document"><div class="modal-content theme-text-color theme-bg-color" id="item-uploader-draggable"><div id="upload-dialog-background" class="w-100 h-100" style="position:absolute;z-index:-3"></div><div class="modal-header"><h5 id="uploader-title" class="modal-title">Upload Items</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><form action="/api/vfs/upload" method="POST" enctype="multipart/form-data" id="upload-form"><div class="modal-body text-center" id="upload-dialog-body"><input type="file" id="file-to-load" style="display:none" multiple="multiple"> <input type="file" id="folder-to-load" style="display:none" webkitdirectory mozdirectory msdirectory odirectory directory><div style="display:inline-block;width:85%;margin:.5rem auto .2rem auto"><a id="clear-item-uploader" class="theme-text-color" style="float:right;text-align:right;text-decoration:none;cursor:pointer">Clear</a></div><div class="border border-bottom-0" style="width:85%;margin:0 auto 1rem auto"><div id="item-uploader-list"></div><div id="item-uploader-list-placeholder" class="border-bottom" style="height:80px;display:flex;align-items:center;position:relative"><i class="w-100">Click the buttons below or drag and drop.</i></div><div class="border-bottom" style="height:50px;display:flex;align-items:center;justify-content:center;position:relative"><a id="item-uploader-add-file" class="theme-text-color nav-link" href="javascript:" onclick='$("#file-to-load").click()'><i class="theme-text-color fa-solid fa-plus"></i> Add Files</a> <a id="item-uploader-add-folder" class="theme-text-color nav-link" href="javascript:" onclick='$("#folder-to-load").click()'><i class="theme-text-color fa-solid fa-plus"></i> Add Folder</a></div></div></div><div class="modal-footer" style="justify-content:center"><button id="item-uploader-submit" class="btn btn-primary" id="openbtn" type="submit">Done</button></div></form></div></div></div><div class="modal fade" id="cody-agree-dialog" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-xl" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header"><h5 class="modal-title">Cody AI Agreement</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><form action="" onsubmit="return submitAIAgreement(),!1" id="cody-agree-form"><div class="modal-body"><p>I hereby acknowledge that by using OpenAI's ChatGPT, I may be subjected to copyright laws and potential infringement. Furthermore, works derived using the output of ChatGPT may not be protected by copyright laws. Copyright laws vary by country and geographical location.</p><p>I acknowledge that I have read and understand this agreement.</p></div><div class="modal-footer justify-content-center"><button type="submit" class="btn btn-primary">Agree</button> <button class="btn btn-secondary" data-dismiss="modal">Cancel</button></div></form></div></div></div><div class="modal fade" id="cody-dialog" tabindex="-1" role="dialog" aria-labelledby="codyDialogTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-xl" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header"><h5 class="modal-title">Cody</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><form action="" onsubmit="return submitAIPrompt(),!1" id="cody-form"><div class="modal-body"><p id="cody-message"><i class="fa-solid fa-robot"></i>&nbsp;Hi, I'm Cody, your AI coding assistant! What do you need help with?</p><p></p><div class="input-group mb-3"><textarea class="form-control" id="cody-prompt" rows="2" maxlength="2000"></textarea><div class="input-group-append"><button type="submit" class="btn btn-success"><i class="fa-solid fa-paper-plane"></i></button></div></div><div id="cody-thinking" class="mb-2" style="display:none"><i class="fa-solid fa-spinner"></i>&nbsp;Thinking...</div><div id="cody-response" style="display:none"></div></div><div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Close</button></div></form></div></div></div> <div class="modal fade" id="new_project" tabindex="-1" role="dialog" aria-labelledby="new-project-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header"><h5 class="modal-title" id="new-project-title">New Pad</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="new-project-form" action="/api/vfs/new_project" method="POST"><input id="new-project-parent" name="parent" type="hidden"> <input id="new-project-tabchar" name="tabchar" type="hidden"><div class="form-group"><label>Pad name:</label><input id="new-project-name" class="form-control" name="name" type="text" placeholder="CoolPad" maxlength="50"></div><label>Select a programming language:</label><div class="dropdown"><button class="form-control btn-block" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:default"><i class="fa-solid fa-caret-down" style="float:right;position:relative;top:3px"></i> <span style="float:left" id="lang-dropdown-title"><img src="/static/images/icons/html.png" alt="HTML/CSS/JS">&nbsp;HTML/CSS/JS</span> <input type="hidden" id="programminglist" name="lang" value="htmlmixed"></button><div class="dropdown-menu btn-block shadow-lg theme-bg-color" id="lang-dropdown"><a class="dropdown-item theme-text-color" href="javascript:" data-lang="htmlmixed"><img src="/static/images/icons/html.png" alt="HTML/CSS/JS">&nbsp;HTML/CSS/JS</a> <a class="dropdown-item theme-text-color" href="javascript:" data-lang="python"><img src="/static/images/icons/python.png" alt="Python">&nbsp;Python</a> <a class="dropdown-item theme-text-color" href="javascript:" data-lang="java"><img src="/static/images/icons/java.png" alt="Java">&nbsp;Java</a> <a class="dropdown-item theme-text-color" href="javascript:" data-lang="php"><img src="/static/images/icons/php.png" alt="PHP">&nbsp;PHP</a> <a class="dropdown-item theme-text-color" href="javascript:" data-lang="text"><i class="fa-solid fa-file-lines"></i>&nbsp;&nbsp;Plain Text</a></div></div></form></div><div class="modal-footer"><button type="button" class="btn btn-primary" id="create-new-project-btn" data-dismiss="modal">Create!</button></div></div></div></div><script>function openNewProjectDialog(parentDir) {
+		if (parentDir === undefined || parentDir === null) {
+			parentDir = '';
+		}
+		$('#new-project-parent').val(parentDir);
+
+		// if spaces, value is the tab size (2, 4, 8), otherwise just say 'tabs'
+		let tabchar;
+		if (localStorage.getItem('tabChar') == 'tabs') {
+			tabchar = 'tabs';
+		} else if (localStorage.getItem('tabSize') == undefined) {
+			tabchar = '4';
+		} else {
+			tabchar = localStorage.getItem('tabSize');
+		}
+		$('#new-project-tabchar').val(tabchar);
+
+		$('#new_project').modal();
+	}
+
+	$('#new-project-form').submit(() => {
+		if ($('#new-project-name').val().trim() == '') {
+			$('#new-project-name').val('Untitled');
+		}
+		return true;
+	});
+
+	$('#create-new-project-btn').click(() => {
+		$('#new-project-form').submit();
+	});
+
+	$('#new-project-name').keydown((e) => {
+		if (e.key == 'Enter') {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+	});
+
+	$('#lang-dropdown a').click((e) => {
+		$('#programminglist').val(e.currentTarget.dataset.lang);
+		$('#lang-dropdown-title').html(e.currentTarget.innerHTML);
+	})</script>  <div class="modal fade" id="share_project" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header"><h5 class="modal-title">Sharing for <b id="share-modal-name">Project Name</b></h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><share-settings id="share-modal-share-settings"></share-settings></div><div class="modal-footer"><button id="share-modal-confirm" class="btn btn-primary" data-dismiss="modal">OK</button> <button class="btn btn-secondary" data-dismiss="modal">Cancel</button></div></div></div></div><script>function openShareProjectDialog(projectData) {
+		$('#share_project').modal();
+		$('#share-modal-name').text(projectData.name);
+
+		$('#share-modal-share-settings')[0].initializeSettings(projectData);
+	}
+
+	$('#share-modal-confirm').click(() => {
+		$('#share-modal-share-settings')[0].saveSettings();
+	})</script>  <template id="details-form-template"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"><link rel="stylesheet" href="/static/styles/layout_light.css" id="layout-theme"><style>.thumbnail-scroll>.row{display:block;overflow-x:auto;white-space:nowrap}.thumbnail-scroll>.row>.col-3{display:inline-block}.select-thumbnail{opacity:.75}.select-thumbnail:hover{opacity:1}.cant-select-thumbnail{border:5px solid #777;background-color:#777}#thumbnail-options-btn{font-size:16pt;position:absolute;left:150px;display:none}#upload-thumbnail-text{position:absolute;top:67px;left:40px}.footer-buttons{display:flex;align-items:center;position:sticky;bottom:-1px;height:54px;background-color:rgba(128,128,128,.35);box-shadow:0 0 5px rgba(128,128,128,.35);backdrop-filter:blur(15px);border-radius:6px 6px 0 0;z-index:10}</style><form id="details-form" action="/api/vfs/change_details" method="POST"><input type="hidden" name="projectId" id="project-id"><div class="form-group"><span>Pad name</span> <input type="text" class="form-control" id="pad-name" name="newname" placeholder="Untitled" maxlength="50"></div><div class="form-group"><span>Description</span><textarea class="form-control" id="description" name="description" style="height:150px" maxlength="2000" placeholder="Describe this pad..."></textarea></div><hr><share-settings id="share-settings"></share-settings><hr><h3>Thumbnail</h3><p>Upload an image that will display on the cover of your pad, or pick one of our default ones!</p><input type="file" id="thumbnail" name="thumbnail" accept=".png, .jpg, .gif, .pjpeg, .jpeg, .pjp, .webp" style="display:none"> <input type="hidden" name="defaultthumbnail" id="defaultthumb" value=""><div class="container thumbnail-scroll"><div class="row no-gutters pb-3" id="thumbnail-list"><div class="col-3 text-center select-thumbnail" style="cursor:pointer;background-color:#dcdcdc" id="imagepreviewdiv"><img src="/static/images/upload_image.svg" alt="Image preview" id="thumbnailpreview" width="170" height="96"> <button id="thumbnail-options-btn" type="button"><i class="fa-solid fa-rotate"></i></button><br><span id="upload-thumbnail-text" style="color:#000">Upload image</span></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail2.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail3.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail4.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail5.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail6.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail7.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail8.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail9.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail10.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail11.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail12.jpg" width="170" height="96" alt="Thumbnail"></div><div class="col-3 select-thumbnail text-center default-thumbnail" style="width:180px;cursor:pointer"><img src="/static/images/thumbnails/thumbnail13.jpg" width="170" height="96" alt="Thumbnail"></div></div></div><hr><h3 style="margin-bottom:10px">Other stuff...</h3><button id="duplicate-pad-btn" class="btn btn-info mb-2 mr-1" style="font-size:14px" type="button"><span class="fa-solid fa-copy" style="color:#fff;padding-right:10px"></span> Duplicate pad</button> <button id="download-pad-btn" class="btn btn-info mb-2" style="font-size:14px" type="button"><span class="fa-solid fa-arrow-down-long" style="color:#fff;padding-right:15px"></span> Download pad as zip</button><br><hr><a id="delete-project-link" style="font-size:14px" href="javascript:" class="text-danger">Permanently delete pad</a> <br><br><div class="pl-2 footer-buttons"><slot id="success-btn" name="success-btn"></slot><slot id="revert-btn" name="revert-btn"></slot><span class="text-success" style="position:relative;top:2px;display:none" id="changes-saved-msg">&nbsp;All changes saved</span> <span style="position:relative;top:2px;display:none" id="saving-msg">&nbsp;Saving...</span></div></form></template><script>// norefreshlinks will load the html directly without refreshing the page
+	// previous page may have already defined the custom element
+	customElements.get('project-details-form') || customElements.define(
+		'project-details-form',
+		class extends HTMLElement {
+			constructor() {
+				super();
+
+				// when norefreshlink loads the html, it may try to create the custom element before the template has been parsed
+				// wait until template has been parsed before proceeding
+				setTimeout(() => {
+					const template = $('#details-form-template')[0].content;
+					const shadowRoot = this.attachShadow({ mode: 'open' });
+					shadowRoot.appendChild(template.cloneNode(true));
+
+					$(document).on('changeTheme', (event, theme) => {
+						if (theme === 'dark') {
+							this.find('#layout-theme').attr('href', '/static/styles/layout_dark.css');
+						} else if (theme === 'light') {
+							this.find('#layout-theme').attr('href', '/static/styles/layout_light.css');
+						}
+					});
+
+					this.uploadedNewImage = false;
+					this.currentProjectData = null;
+
+					this.find = (jquery) => {
+						return $(shadowRoot).find(jquery);
+					};
+
+					this.find('#duplicate-pad-btn').click((e) => {
+						location.href = '/api/vfs/duplicate_pad/' + this.currentProjectData.id;
+					});
+
+					this.find('#download-pad-btn').click((e) => {
+						location.href = '/api/vfs/download_pad/' + this.currentProjectData.id;
+					});
+
+					this.find('#thumbnail-options-btn').click((e) => {
+						this.find('#thumbnail').val(""); // clear input, in case you uploaded a file with the same filename twice (the browser won't detect it)
+						this.find('#thumbnail').click();
+					});
+
+					this.find('#thumbnail').on('change', (e) => {
+						this.uploadedNewImage = true;
+						this.updateThumbnailPreview();
+					});
+
+					this.find('.default-thumbnail').click((e) => {
+						this.selectThumbnail(e.currentTarget);
+					});
+
+					this.find('#details-form').on('input', (e) => {
+						this.setDisabledOnSlots(false);
+					});
+
+					this.find('#details-form').submit((e) => {
+						this.saveSettings();
+						return false;
+					});
+				}, 0);
+			}
+
+			initializeForm(data) {
+				this.find('#share-settings')[0].initializeSettings(data);
+
+				if (data === undefined) {
+					data = this.currentProjectData;
+				}
+
+				this.find('#delete-project-link').off('click');
+				if (data) {
+					this.uploadedNewImage = false;
+					this.currentProjectData = data;
+
+					this.find('#delete-project-link').click(() => {
+						openDeleteProjectDialog(this.currentProjectData);
+					});
+
+					this.setDisabledOnSlots(true);
+					this.find('#project-id').val(data.id);
+
+					if (data.name != 'Untitled') {
+						this.find('#pad-name').val(data.name);
+					} else {
+						this.find('#pad-name').val('');
+					}
+
+					this.find('#description').val(data.description);
+
+					if (data.thumbnail == 'custom') {
+						this.find('#thumbnailpreview').attr('src', '/thumbnail/' + data.id);
+
+						this.find('#imagepreviewdiv').addClass('cant-select-thumbnail');
+						this.find('#imagepreviewdiv').removeClass('select-thumbnail');
+
+						this.find('#imagepreviewdiv').off('click');
+						this.find('#imagepreviewdiv').click((e) => {
+							this.selectThumbnail(e.currentTarget);
+						});
+
+						this.find('#imagepreviewdiv').on('mouseover', () => {
+							this.find('#thumbnail-options-btn').show();
+						});
+						this.find('#imagepreviewdiv').on('mouseout', () => {
+							this.find('#thumbnail-options-btn').hide();
+						});
+
+						this.find('#upload-thumbnail-text').hide();
+					} else {
+						this.find('#imagepreviewdiv').css('background-color', '#eee');
+
+						this.find('#thumbnailpreview').attr('src', '/static/images/upload_image.svg');
+
+						Array.from(this.find('#thumbnail-list')[0].children).forEach((e) => {
+							if ($(e).find('img').attr('src') == '/static/images/thumbnails/' + data.thumbnail) {
+								this.selectThumbnail(e, false);
+								return;
+							}
+						});
+
+						this.find('#imagepreviewdiv').addClass('select-thumbnail');
+						this.find('#imagepreviewdiv').removeClass('cant-select-thumbnail');
+
+						this.find('#imagepreviewdiv').off('click');
+						this.find('#imagepreviewdiv').click((e) => {
+							this.find('#thumbnail').click();
+						});
+
+						this.find('#imagepreviewdiv').off('mouseover');
+						this.find('#imagepreviewdiv').off('mouseout');
+
+						this.find('#upload-thumbnail-text').show();
+					}
+				}
+			}
+
+			haveSettingsChanged() {
+				let changed = false;
+
+				const padName = this.find('#pad-name').val();
+				if (this.currentProjectData.name == 'Untitled') {
+					changed ||= padName != '' && padName != 'Untitled';
+				} else {
+					changed ||= padName != this.currentProjectData.name;
+				}
+
+				changed ||= this.find('#description').val() != this.currentProjectData.description;
+
+				if (this.currentProjectData.thumbnail == 'custom') {
+					changed ||= this.find('#defaultthumb').val() !== '' || this.uploadedNewImage;
+				} else {
+					changed ||= this.currentProjectData.thumbnail !== this.find('#defaultthumb').val();
+				}
+
+				return changed;
+			}
+
+			saveSettings(force) {
+				this.setDisabledOnSlots(true);
+
+				let savingCount = 0;
+				const startSaving = () => {
+					savingCount++;
+					this.find('#changes-saved-msg').stop(true, true);
+					this.find('#saving-msg').show();
+				};
+
+				const doneSaving = () => {
+					savingCount--;
+					if (savingCount == 0) {
+						this.find('#saving-msg').hide();
+						this.find('#changes-saved-msg').show();
+						this.find('#changes-saved-msg').fadeOut(2000);
+					}
+				}
+
+				if (force || this.haveSettingsChanged()) {
+					startSaving();
+
+					const formData = new FormData(this.find('#details-form')[0]);
+
+					$.ajax({
+						method: 'POST',
+						url: '/api/vfs/change_details',
+						data: formData,
+						contentType: false,
+						processData: false,
+						success: () => {
+							doneSaving();
+
+							let newName = this.find('#pad-name').val();
+							if (newName == '') {
+								newName = 'Untitled';
+							}
+
+							this.currentProjectData.name = newName;
+							this.currentProjectData.description = this.find('#description').val();
+							if (this.find('#defaultthumb').val()) {
+								this.currentProjectData.thumbnail = this.find('#defaultthumb').val();
+							} else if (this.currentProjectData.thumbnail == 'custom') {
+								this.currentProjectData.forceThumbnailChange();
+							} else {
+								this.currentProjectData.thumbnail = 'custom';
+							}
+						},
+						error: (jqXHR, status) => {
+							alert(status);
+						}
+					});
+				}
+
+				this.find('#share-settings')[0].saveSettings(false, startSaving, doneSaving);
+			}
+
+			updateThumbnailPreview() {
+				const [file] = this.find('#thumbnail')[0].files;
+				if (file) {
+					this.find('#thumbnailpreview')[0].src = URL.createObjectURL(file);
+					this.find('#imagepreviewdiv').css('background-color', '');
+					this.find('#upload-thumbnail-text').hide();
+
+					this.find('#imagepreviewdiv').addClass('cant-select-thumbnail');
+					this.find('#imagepreviewdiv').removeClass('select-thumbnail');
+
+					this.find('#imagepreviewdiv').off('click');
+					this.find('#imagepreviewdiv').click((e) => {
+						this.selectThumbnail(e.currentTarget);
+					});
+
+					this.find('#imagepreviewdiv').off('mouseover');
+					this.find('#imagepreviewdiv').off('mouseout');
+					this.find('#imagepreviewdiv').on('mouseover', () => {
+						this.find('#thumbnail-options-btn').show();
+					});
+					this.find('#imagepreviewdiv').on('mouseout', () => {
+						this.find('#thumbnail-options-btn').hide();
+					});
+
+					this.selectThumbnail(this.find('#imagepreviewdiv')[0]);
+				}
+			}
+
+			selectThumbnail(thumbnailElement, updateSaveBtn) {
+				if (this.find('.cant-select-thumbnail')[0] == thumbnailElement) { // if the project is the same one
+					updateSaveBtn = false;
+				}
+
+				if (thumbnailElement.id == 'imagepreviewdiv') { // if selected image is the "image preview"/the one that you can upload
+					this.find('#thumbnail-options-btn').css('left', '150px');
+
+					this.find('#defaultthumb').val('');
+				} else {
+					this.find('#thumbnail-options-btn').css('left', '155px');
+
+					const src = this.find(thumbnailElement).find('img')[0].src;
+					this.find('#defaultthumb').val(src.replace(/^.*[\\\/]/, '')); // filter out the path so it only has the file name
+				}
+
+				var allThumbnails = thumbnailElement.parentElement.children;
+
+				for (var i = 0; i < allThumbnails.length; i++) {
+					this.find(allThumbnails[i]).addClass('select-thumbnail');
+					this.find(allThumbnails[i]).removeClass('cant-select-thumbnail');
+				}
+
+				this.find(thumbnailElement).removeClass('select-thumbnail');
+				this.find(thumbnailElement).addClass('cant-select-thumbnail');
+
+				if (updateSaveBtn !== false) {
+					this.setDisabledOnSlots(false);
+				}
+			}
+
+			setDisabledOnSlots(disabled) {
+				for(const id of ['success-btn', 'revert-btn']) {
+					const slot = this.find('#' + id)[0];
+					for(const assignedElement of slot.assignedElements()) {
+						if (assignedElement.hasAttribute('data-dynamically-disable')) {
+							if (disabled) {
+								$(assignedElement).attr('disabled', '');
+							} else {
+								$(assignedElement).removeAttr('disabled');
+							}
+						}
+					}
+				}
+			}
+		}
+	)</script>  <template id="share-settings-template"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"><link rel="stylesheet" href="/static/styles/layout_light.css" id="layout-theme"><style>.collaborator-btn:hover{background-color:rgba(190,190,190,.45)}.collaborator-entry{display:flex;align-items:center;cursor:pointer;border-radius:.5rem}.collaborator-entry:hover{background-color:rgba(190,190,190,.3)}</style><h5>Link Sharing</h5><div id="anonymous-sharing-error" style="display:none"><div class="input-group" role="group"><div class="input-group-prepend"><button class="copy-button btn btn-outline-secondary" type="button" data-toggle="popover" data-trigger="manual" data-placement="bottom" data-content="Copied!"><i class="fa-regular fa-clipboard" style="pointer-events:none"></i></button></div><select class="form-control" aria-label="Select link share mode" disabled="disabled"><option selected="selected">Unlisted</option></select></div><p>Anonymous pads are shared by default. </p></div><div id="change-share-options" style="display:none"><div class="input-group" role="group"><div class="input-group-prepend"><button class="copy-button btn btn-outline-secondary" type="button" data-toggle="popover" data-trigger="manual" data-placement="bottom" data-content="Copied!"><i class="fa-regular fa-clipboard" style="pointer-events:none"></i></button></div><select id="link-share-select" class="form-control" aria-label="Select link share mode"><option selected="selected">Private</option><option>Public</option><option>Unlisted</option></select></div><p id="link-share-explanation"></p><h5 class="mt-4">Collaborators</h5><div class="input-group"><input id="add-collaborator-input" class="form-control" type="text" placeholder="CodePad username" autocomplete="off"><div class="input-group-append"><button id="add-collaborator-btn" class="btn btn-outline-success">Add</button></div></div><small id="user-doesnt-exist" class="text-danger" style="display:none">This user doesn't exist!</small><div id="owner-name" class="mt-1" data-your-username="SBrown11"></div><div id="collaborators-list"></div></div></template><script>var template = $('#share-settings-template')[0].content;
+	$(template).find('#link-share-select option:contains("Private")').val(LinkShareMode.PRIVATE);
+	$(template).find('#link-share-select option:contains("Public")').val(LinkShareMode.PUBLIC);
+	$(template).find('#link-share-select option:contains("Unlisted")').val(LinkShareMode.UNLISTED);
+
+	// norefreshlinks will load the html directly without refreshing the page
+	// previous page may have already defined the custom element
+	customElements.get('share-settings') || customElements.define(
+		'share-settings',
+		class extends HTMLElement {
+			constructor() {
+				super();
+
+				// when norefreshlink loads the html, it may try to create the custom element before the template has been parsed
+				// wait until template has been parsed before proceeding
+				setTimeout(() => {
+					const shadowRoot = this.attachShadow({ mode: 'open' });
+					shadowRoot.appendChild(template.cloneNode(true));
+
+					$(document).on('changeTheme', (event, theme) => {
+						if (theme === 'dark') {
+							this.find('#layout-theme').attr('href', '/static/styles/layout_dark.css');
+						} else if (theme === 'light') {
+							this.find('#layout-theme').attr('href', '/static/styles/layout_light.css');
+						}
+					});
+
+					this.currentProjectData = null;
+					// Each entry is in the form {name: 'str', editor: true | false}
+					// Use array to keep relative ordering of collaborators
+					this.collaborators = [];
+
+					this.hostElement = shadowRoot.host;
+					this.find = (jquerySelector) => {
+						return $(shadowRoot).find(jquerySelector);
+					}
+					this.yourUsername = this.find('#owner-name').data('your-username');
+
+					this.updateLinkShareDescription();
+					this.find('#link-share-select').on('input', (e) => {
+						this.updateLinkShareDescription();
+					});
+
+					let popoverHide = 0;
+					this.find('.copy-button').click((e) => {
+						const target = $(e.target);
+						if (popoverHide) {
+							target.popover('dispose');
+							clearTimeout(popoverHide);
+						}
+
+						if (navigator.clipboard) {
+							navigator.clipboard.writeText(location.protocol + '//' + location.host + '/edit/' + this.currentProjectData.id).then(() => {
+								target.attr('data-content', 'Copied!');
+								target.popover('show');
+								popoverHide = setTimeout(() => {
+									target.popover('dispose');
+								}, 1500);
+							}, (err) => {
+								target.attr('data-content', 'Copy failed');
+								target.popover('show');
+								popoverHide = setTimeout(() => {
+									target.popover('dispose');
+								}, 1500);
+							});
+						} else {
+							target.attr('data-content', 'Copy not supported');
+							target.popover('show');
+							popoverHide = setTimeout(() => {
+								target.popover('dispose');
+							}, 1500);
+						}
+					});
+
+					this.find('#add-collaborator-input').on('input', (e) => {
+						e.preventDefault();
+						e.stopPropagation();
+					});
+
+					this.find('#add-collaborator-input').on('keyup',(e) => {
+						if(e.key === 'Enter') {
+							this.addCollaborator(e.currentTarget.value);
+						}
+					});
+
+					this.find('#add-collaborator-btn').click((e) => {
+						this.addCollaborator(this.find('#add-collaborator-input').val());
+					});
+
+					// Bootstrap doesn't hide dropdowns in the shadow dom
+					$(document).click(() => {
+						this.find('.dropdown-toggle').dropdown('hide');
+					});
+				}, 0);
+			}
+
+			initializeSettings(data) {
+				if (data === undefined) {
+					data = this.currentProjectData;
+				}
+
+				if (data) {
+					this.currentProjectData = data;
+					if (data.ownerName == null) {
+						this.find('#anonymous-sharing-error').show();
+						this.find('#change-share-options').hide();
+					} else {
+						this.find('#anonymous-sharing-error').hide();
+						this.find('#change-share-options').show();
+
+						this.find('#link-share-select').val(data.linkShareMode);
+						this.updateLinkShareDescription();
+
+						this.find('#owner-name').html('');
+						this.find('#collaborators-list').html('');
+						this.find('#add-collaborator-input').val('');
+						this.collaborators = [];
+
+						for(const viewUser of data.viewUsers) {
+							this.addCollaboratorElement(viewUser, 'viewer');
+						}
+
+						for(const editUser of data.editUsers) {
+							this.addCollaboratorElement(editUser, 'editor');
+						}
+
+						if (this.currentProjectData.ownerName != null) {
+							this.addCollaboratorElement(data.ownerName, 'owner');
+						}
+					}
+				}
+			}
+
+			haveSettingsChanged() {
+				if (this.currentProjectData.ownerName != null) {
+					let settingsChanged = false;
+
+					if (this.find('#link-share-select').val() != this.currentProjectData.linkShareMode) {
+						return true;
+					}
+
+					if (this.currentProjectData.viewUsers.length + this.currentProjectData.editUsers.length != this.collaborators.length) {
+						return true;
+					}
+
+					for(const collaborator of this.collaborators) {
+						if (collaborator.editor) {
+							if (!this.currentProjectData.editUsers.includes(collaborator.name)) {
+								return true;
+							}
+						} else {
+							if (!this.currentProjectData.viewUsers.includes(collaborator.name)) {
+								return true;
+							}
+						}
+					}
+				}
+
+				return false;
+			}
+
+			saveSettings(force, startSaving, doneSaving) {
+				if (this.currentProjectData.ownerName != null && (force || this.haveSettingsChanged())) {
+					if (startSaving) {
+						startSaving();
+					}
+
+					const linkShareMode = this.find('#link-share-select').val();
+
+					const viewUsers = [];
+					const editUsers = [];
+					for(let i = this.collaborators.length - 1; i >= 0; i--) {
+						if (this.collaborators[i].editor) {
+							editUsers.push(this.collaborators[i].name);
+						} else {
+							viewUsers.push(this.collaborators[i].name);
+						}
+					}
+
+					$.ajax({
+						method: 'POST',
+						url: '/api/vfs/update_sharing',
+						data: {
+							projectId: this.currentProjectData.id,
+							linkShareMode: linkShareMode,
+							viewUsers: viewUsers,
+							editUsers: editUsers
+						},
+						success: () => {
+							if (doneSaving) {
+								doneSaving();
+							}
+
+							this.currentProjectData.linkShareMode = linkShareMode;
+							this.currentProjectData.viewUsers = viewUsers;
+							this.currentProjectData.editUsers = editUsers;
+
+							if (this.currentProjectData.ownerName != this.yourUsername) {
+								// assuming you had edit access before or this ajax call would fail
+								if (!editUsers.includes(this.yourUsername)) {
+									let newAccess = 'view';
+									if (linkShareMode == LinkShareMode.PRIVATE && !viewUsers.includes(this.yourUsername)) {
+										newAccess = 'none'
+									}
+
+									this.currentProjectData.triggerAccessUpdatedEvent(newAccess);
+								}
+							}
+						},
+						error: function(jqXHR, status) {
+							alert(status);
+						}
+					});
+				}
+			}
+
+			updateLinkShareDescription() {
+				const option = this.find('#link-share-select').val();
+
+				if (option == LinkShareMode.PRIVATE) {
+					this.find('#link-share-explanation').text('Only collaborators can access.');
+				} else if (option == LinkShareMode.PUBLIC) {
+					this.find('#link-share-explanation').text('Anyone with the link can view, and the pad will be advertised on CodePad\'s homepage.');
+				} else if (option == LinkShareMode.UNLISTED) {
+					this.find('#link-share-explanation').text('Anyone with the link can view.');
+				}
+			}
+
+			addCollaboratorElement(username, role) {
+				let currentIcon = '<i class="fa-solid fa-eye"></i>';
+				if (role === 'editor') {
+					currentIcon = '<i class="fa-solid fa-pen"></i>';
+				}
+
+				let displayedUsername = username;
+				if (username == this.yourUsername) {
+					displayedUsername += ' (you)';
+				}
+
+				if (role === 'owner') {
+					const ele = $(`
+<div class="p-1 collaborator-entry" title="Open profile page in new tab">
+	<img src="/profilepic/${username}" width="32" class="mr-2" style="border-radius: 50%">
+	${displayedUsername}
+	<span class="dropdown pr-1" style="margin-left: auto;">
+		Owner
+	</span>
+</div>`);
+					this.find('#owner-name').prepend(ele);
+					ele.click(() => {
+						window.open('/user/' + username, '_blank');
+					});
+				} else {
+					const ele = $(`
+<div class="p-1 collaborator-entry" title="Open profile page in new tab">
+	<img src="/profilepic/${username}" width="32" class="mr-2" style="border-radius: 50%">
+	${displayedUsername}
+	<div class="dropdown" style="margin-left: auto;">
+		<button class="btn dropdown-toggle theme-text-color px-2 collaborator-btn" type="button" data-toggle="dropdown" aria-expanded="false">${currentIcon}</button>
+		<div class="dropdown-menu dropdown-menu-right theme-bg-color">
+			<a class="dropdown-item theme-text-color view-option" href="javascript:"><i class="fa-solid fa-eye mr-2"></i>Viewer</a>
+			<a class="dropdown-item theme-text-color edit-option" href="javascript:"><i class="fa-solid fa-pen mr-2"></i>Editor</a>
+		</div>
+	</div>
+	<button class="btn px-2 collaborator-btn remove-btn"><i class="fa-solid fa-trash text-danger"></i></button>
+</div>`);
+
+					const entry = {name: username, editor: role === 'editor'};
+					this.collaborators.unshift(entry);
+
+					this.find('#collaborators-list').prepend(ele);
+					// must manually initialize dropdown because Bootstrap isn't completely compatible with shadow dom
+					ele.find('.dropdown-toggle').click((e) => {
+						const dropdownMenu = $(e.currentTarget.parentElement).find('.dropdown-menu');
+						if (dropdownMenu.hasClass('show')) {
+							$(e.currentTarget).dropdown('hide');
+							e.preventDefault();
+							e.stopImmediatePropagation();
+						}
+					});
+					ele.find('.dropdown-toggle').dropdown();
+
+					ele.click((e) => {
+						if (e.target != ele.find('.dropdown')[0] && !$.contains(ele.find('.dropdown')[0], e.target)) {
+							window.open('/user/' + username, '_blank');
+						}
+					});
+
+					ele.find('.view-option').click((e) => {
+						const dropdownBtn = $(e.currentTarget.parentElement.parentElement).find('.dropdown-toggle');
+						dropdownBtn.html('<i class="fa-solid fa-eye"></i>');
+						entry.editor = false;
+						$(this.hostElement).trigger('input');
+					});
+
+					ele.find('.edit-option').click((e) => {
+						const dropdownBtn = $(e.currentTarget.parentElement.parentElement).find('.dropdown-toggle');
+						dropdownBtn.html('<i class="fa-solid fa-pen"></i>');
+						entry.editor = true;
+						$(this.hostElement).trigger('input');
+					});
+
+					ele.find('.remove-btn').click((e) => {
+						ele.remove();
+						this.collaborators.splice(this.collaborators.indexOf(entry), 1);
+						$(this.hostElement).trigger('input');
+					});
+				}
+			}
+
+			addCollaborator(username) {
+				username = username.toLowerCase();
+				if (username == this.yourUsername.toLowerCase()) {
+					return;
+				}
+
+				for(const collaborator of this.collaborators) {
+					if (username == collaborator.name.toLowerCase()) {
+						return;
+					}
+				}
+
+				$.get('/api/account/get_username/' + username, (realUsername) => {
+					this.find('#user-doesnt-exist').hide();
+					this.find('#add-collaborator-input').val('');
+					this.addCollaboratorElement(realUsername, 'viewer');
+					$(this.hostElement).trigger('input');
+				}).fail(() => {
+					this.find('#user-doesnt-exist').show();
+				});
+			}
+		}
+	)</script>  <div class="modal fade" id="delete_project" tabindex="-1" role="dialog"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content theme-text-color theme-bg-color"><div class="modal-header"><h5 class="modal-title">Delete Pad</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>Are you sure you want to delete <b id="project-name-bold"></b>? This is permanent and everything inside it will be completely gone.</p></div><div class="modal-footer"><button class="btn btn-danger" id="project-delete-button" data-dismiss="modal">Delete</button> <button class="btn btn-secondary" data-dismiss="modal">Cancel</button></div></div></div></div><script>function openDeleteProjectDialog(e){$(".modal").modal("hide"),$("#delete_project").modal(),$("#project-name-bold").text(e.name),$("#project-delete-button").off("click"),$("#project-delete-button").click(function(){$.ajax({method:"POST",url:"/api/vfs/delete_project",data:{projectId:e.id},dataType:"text",success:function(){e.triggerDeleteEvent()},error:function(e,t){alert(t)}})})}</script> <script>const mode = 'edit';
+	const isOwner = "True" == 'True';
+	const initialMainFileId = 'homepage.html';
+	const initialManualMainFile = 'False' == 'True';
+	const lessonPage = -1;
+	const projectDataJsonString = '{"name": "Personal Blog", "id": "6x370d1l", "description": "", "lang": "htmlmixed", "modified": "2023-08-27T20:51:03Z", "created": "2023-08-27T13:52:04Z", "firstShareDate": "2023-08-27T20:53:00Z", "thumbnail": "thumbnail7.jpg", "linkShareMode": 1, "viewUsers": [], "editUsers": [], "ownerName": "SBrown11", "parentId": null, "lesson": null, "recentViews": null, "totalViews": null}';
+	
+	let aiAgreed = 'None' != 'None';
+
+	var webUseSubdomains = 'True' == 'True';
+
+	
+		var webDomain = 'https://codepad.live';
+	
+
+	
+		const editorType = 'monaco';
+	</script></body></html>
